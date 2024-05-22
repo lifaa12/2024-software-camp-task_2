@@ -1,0 +1,97 @@
+.intro-card {
+  background: #ffffff1a;
+  backdrop-filter: blur(3px);
+  max-width: 526px;
+  height: 400px;
+  border-radius: 24px;
+  padding: 80px 40px 0 40px;
+  margin: 200px 0;
+  .intro-card-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: $font-base * 1.75;
+    margin-bottom: 8px;
+  }
+  .intro-card-text {
+    color: #fff;
+    margin-bottom: 24px;
+  }
+  .intro-card-badge {
+    border-bottom: 1px solid #f1f1f1;
+    li {
+      border-radius: 16px;
+      background: #fff;
+      padding: 4px 12px;
+      margin-right: 16px;
+      margin-bottom: 40px;
+    }
+  }
+  .intro-card-link {
+    display: block;
+    margin: 40px 135px;
+    background: #000;
+    color: #fff;
+    line-height: 1.8;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 5px;
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+
+.section-title {
+  position: relative;
+  font-size: $font-base * 2;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  margin-bottom: 80px;
+  &::before {
+    content: "";
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true);
+    width: 100px;
+    height: 6px;
+    position: absolute;
+    top: 45%;
+    left: 36%;
+  }
+  &::after {
+    content: "";
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true);
+    width: 100px;
+    height: 6px;
+    position: absolute;
+    top: 45%;
+    right: 36%;
+  }
+}
+.featured-card {
+  max-width: 416px;
+  .featured-card-img {
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .featured-card-title {
+    font-size: $font-base * 1.25;
+    font-weight: 700;
+    color: $primary-700;
+    margin-bottom: 16px;
+  }
+  .featured-card-footer {
+    display: flex;
+    justify-content: space-between;
+    .featured-footer-badge {
+      border-radius: 16px;
+      padding: 4px 12px;
+      color: $primary-700;
+      background: #f1f1f1;
+    }
+    .featured-footer-date {
+      color: $primary-600;
+    }
+  }
+}

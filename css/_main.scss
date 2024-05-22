@@ -1,0 +1,201 @@
+// index
+.header {
+  .header-content {
+    padding: 248px 0;
+    .header-title {
+      font-size: $font-base * 2.5;
+      color: $primary-700;
+      line-height: 3;
+      font-weight: 600;
+    }
+    .header-text {
+      font-size: $font-base * 1.25;
+      margin-bottom: 16px;
+      color: $primary-600;
+      position: relative;
+      &::before {
+        content: "";
+        width: 148px;
+        height: 10px;
+        top: 20px;
+        left: 140px;
+        z-index: -1;
+        position: absolute;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+      }
+      &::after {
+        content: "";
+        width: 119px;
+        height: 10px;
+        top: 20px;
+        left: 300px;
+        z-index: -1;
+        position: absolute;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+        background-size: contain;
+      }
+    }
+    span {
+      color: $primary-400;
+      margin-bottom: 60px;
+    }
+  }
+  .header-content-icon {
+    margin-top: 60px;
+    a {
+      margin-right: 16px;
+      text-decoration: none;
+      img {
+        width: 40px;
+        height: 40px;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .header-img {
+    position: absolute;
+    max-width: 1154px;
+    right: 0;
+  }
+}
+.work-intro {
+  padding-top: 120px;
+  .work-intro-content {
+    height: 800px;
+    .homepage-work-bg-1 {
+      @include homepage-full-bg(
+        "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1-bg.png?raw=true",
+        800px
+      );
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 800px;
+        background: gray;
+        opacity: 20%;
+      }
+    }
+    .homepage-work-bg-2 {
+      @include homepage-full-bg(
+        "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true",
+        800px
+      );
+      &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 800px;
+        background: #000;
+        opacity: 30%;
+      }
+    }
+    .homepage-work-bg-3 {
+      @include homepage-full-bg(
+        "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true",
+        800px
+      );
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 800px;
+        background: #000;
+        opacity: 50%;
+      }
+    }
+    .intro {
+      .homepage-work-1 {
+        max-width: 714px;
+        height: 800px;
+        margin-right: 55px;
+      }
+      .homepage-work3-sm {
+        max-width: 710px;
+        height: 512px;
+        margin: 176px 50px 0 0;
+      }
+    }
+  }
+}
+.service-bg {
+  @include homepage-full-bg(
+    "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true",
+    880px
+  );
+}
+.service-title {
+  padding-top: 80px;
+  &::before {
+    top: 77%;
+  }
+  &::after {
+    top: 77%;
+  }
+}
+.service-content {
+  margin-bottom: 80px;
+  li {
+    width: 304px;
+    height: 304px;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: $font-base * 1.75;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+}
+.service-contact {
+  .service-contact-text {
+    font-size: $font-base * 1.75;
+    color: $primary-700;
+    font-weight: 600;
+    line-height: 2.1;
+    margin-bottom: 40px;
+  }
+  .service-contact-link {
+    display: block;
+    width: 276px;
+    height: 62px;
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.8;
+    span {
+      margin-left: 12px;
+    }
+    &:hover {
+      background: #cac6c6;
+      color: #000;
+    }
+  }
+  margin-bottom: 126px;
+}
+.featured {
+  padding: 120px 0;
+  .swiper {
+    max-width: 1296px;
+    height: 430px;
+  }
+}
+:root {
+  --swiper-pagination-color: #000;
+}
+
+// work

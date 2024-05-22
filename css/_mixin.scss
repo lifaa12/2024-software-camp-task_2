@@ -1,0 +1,19 @@
+@mixin h1-img {
+  display: block;
+  width: 90px;
+  height: 40px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg);
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin homepage-full-bg($img-url, $height) {
+  background-image: url($img-url);
+  background-size: cover;
+  position: absolute;
+  height: $height;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}

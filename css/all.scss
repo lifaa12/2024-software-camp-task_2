@@ -1,0 +1,38 @@
+// Bootstrap
+@import "../node_modules/bootstrap/scss/functions";
+@import "../css/helpers/bootstrap-variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/modal";
+
+// swiper
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+
+// font、icon
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+// reset
+@import "_reset.scss";
+
+// variables
+@import "./variables";
+
+// mixin
+@import "./mixin";
+
+// components
+@import "./components";
+
+// utilities
+@import "./utilities";
+
+// base
+@import "./base";
+
+// layout
+@import "./layout";
+
+// main
+@import "./main";
