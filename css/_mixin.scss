@@ -8,9 +8,18 @@
   white-space: nowrap;
 }
 
-@mixin homepage-full-bg($img-url, $height) {
+@mixin full-bg-img($img-url, $height) {
   background-image: url($img-url);
   background-size: cover;
+  position: absolute;
+  height: $height;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+
+@mixin full-bg-color($bg-color, $height) {
+  background: $bg-color;
   position: absolute;
   height: $height;
   left: 0;

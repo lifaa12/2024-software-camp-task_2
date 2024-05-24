@@ -378,7 +378,7 @@
 }
 @media (min-width: 1200px) {
   .modal-xl {
-    --bs-modal-width: 1900px;
+    --bs-modal-width: 1076px;
   }
 }
 .modal-fullscreen {
@@ -663,6 +663,94 @@ img {
   color: #5B5B5B;
 }
 
+.work-card {
+  width: 49%;
+}
+.work-card .work-card-img {
+  border-radius: 5px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.work-card .work-card-title {
+  display: inline;
+  color: #3B3B3B;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 2.1;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.work-card .work-card-text {
+  color: #919191;
+  margin-bottom: 24px;
+}
+.work-card .work-card-badge li {
+  background: #F1F1F1;
+  padding: 4px 12px;
+  border-radius: 16px;
+  color: #3B3B3B;
+  margin: 0 16px 80px 0;
+}
+
+.modal-content {
+  border-radius: 16px;
+}
+.modal-content .work-modal-header {
+  padding: 40px 56px 0px 56px;
+}
+.modal-content .modal-close-btn {
+  text-align: right;
+}
+.modal-content .modal-close-btn span:hover {
+  font-weight: 800;
+  cursor: pointer;
+}
+.modal-content .work-modal-title {
+  margin-top: 40px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #3B3B3B;
+  line-height: 2.1;
+  margin-bottom: 8px;
+}
+.modal-content .work-modal-subtitle {
+  color: #919191;
+  margin-bottom: 40px;
+}
+.modal-content .work-modal-intro {
+  margin-bottom: 40px;
+}
+.modal-content .work-modal-intro .modal-intro-text {
+  max-width: 532px;
+  color: #1E1E1E;
+}
+.modal-content .work-modal-intro .modal-intro-info {
+  height: 56px;
+  border-left: #C1C1C1 solid 1px;
+  padding-left: 24px;
+  color: #5B5B5B;
+}
+.modal-content .work-modal-content {
+  background: #FAFAFA;
+  border-radius: 0 0 16px 16px;
+  padding: 80px 178px 24px 178px;
+}
+.modal-content .work-modal-content img {
+  max-width: 720px;
+  border-radius: 20px;
+}
+.modal-content .work-modal-content .modal-content-title {
+  margin: 24px 0 16px 0;
+  color: #1E1E1E;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.modal-content .work-modal-content .modal-content-text {
+  margin-bottom: 56px;
+  color: #5B5B5B;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -735,6 +823,7 @@ body {
           backdrop-filter: blur(5px);
   border-bottom: 1px solid #f1f1f1;
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
   right: 0;
@@ -784,9 +873,14 @@ body {
 .navbar .nav .nav-item {
   -ms-flex-item-align: center;
       align-self: center;
-  padding: 4px 8px;
   position: relative;
   cursor: pointer;
+}
+.navbar .nav .nav-item a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 4px 8px;
 }
 .navbar .nav .nav-item .corner {
   position: absolute;
@@ -887,22 +981,22 @@ body {
       align-self: center;
 }
 
-.header .header-content {
+.index-header .index-header-content {
   padding: 248px 0;
 }
-.header .header-content .header-title {
+.index-header .index-header-content .index-header-title {
   font-size: 40px;
   color: #3B3B3B;
   line-height: 3;
   font-weight: 600;
 }
-.header .header-content .header-text {
+.index-header .index-header-content .index-header-text {
   font-size: 20px;
   margin-bottom: 16px;
   color: #5B5B5B;
   position: relative;
 }
-.header .header-content .header-text::before {
+.index-header .index-header-content .index-header-text::before {
   content: "";
   width: 148px;
   height: 10px;
@@ -912,7 +1006,7 @@ body {
   position: absolute;
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
 }
-.header .header-content .header-text::after {
+.index-header .index-header-content .index-header-text::after {
   content: "";
   width: 119px;
   height: 10px;
@@ -923,26 +1017,26 @@ body {
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
   background-size: contain;
 }
-.header .header-content span {
+.index-header .index-header-content span {
   color: #C1C1C1;
   margin-bottom: 60px;
 }
-.header .header-content-icon {
+.index-header .header-content-icon {
   margin-top: 60px;
 }
-.header .header-content-icon a {
+.index-header .header-content-icon a {
   margin-right: 16px;
   text-decoration: none;
 }
-.header .header-content-icon a img {
+.index-header .header-content-icon a img {
   width: 40px;
   height: 40px;
 }
-.header .header-content-icon a img:hover {
+.index-header .header-content-icon a img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-.header .header-img {
+.index-header .index-header-img {
   position: absolute;
   max-width: 1154px;
   right: 0;
@@ -1109,4 +1203,102 @@ body {
 
 :root {
   --swiper-pagination-color: #000;
+}
+
+.work-header-bg {
+  background: #fafafa;
+  position: absolute;
+  height: 473px;
+  left: 0;
+  right: 0;
+  z-index: -10;
+}
+
+.work-header-title {
+  padding-top: 139px;
+  margin-bottom: 83px;
+}
+.work-header-title .work-header-text {
+  display: inline;
+  font-size: 24px;
+  line-height: 1.8;
+  color: #1E1E1E;
+  font-weight: 600;
+  position: relative;
+}
+.work-header-title .work-header-text::before {
+  content: "";
+  position: absolute;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true);
+  width: 65px;
+  height: 60px;
+  top: -60px;
+  left: -70px;
+}
+.work-header-title .work-header-text::after {
+  content: "";
+  position: absolute;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true);
+  width: 65px;
+  height: 60px;
+  bottom: -50px;
+  right: -50;
+  z-index: 99;
+}
+
+.work-header-exp {
+  max-width: 636px;
+  margin: 0 auto 80px auto;
+}
+.work-header-exp .header-exp-item {
+  width: 46%;
+}
+.work-header-exp .header-exp-item .exp-item-title {
+  color: #5B5B5B;
+  margin-bottom: 12px;
+  position: relative;
+}
+.work-header-exp .header-exp-item .exp-item-title::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 46%;
+  width: 24px;
+  height: 2px;
+  background: #C1C1C1;
+}
+.work-header-exp .header-exp-item .exp-item-content {
+  color: #3B3B3B;
+}
+
+.work-show {
+  padding-top: 120px;
+}
+
+.work-pagination {
+  width: 152px;
+  margin: 0 auto 120px auto;
+}
+.work-pagination .work-page-active {
+  background: #1E1E1E;
+  color: #fff;
+}
+.work-pagination li {
+  width: 40px;
+  height: 40px;
+  padding: 2px 13px;
+  border-radius: 4px;
+  font-size: 24px;
+  line-height: 2.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.work-pagination li:hover {
+  background: #1E1E1E;
+  color: #fff;
 }/*# sourceMappingURL=all.css.map */

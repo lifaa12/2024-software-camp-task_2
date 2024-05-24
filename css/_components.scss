@@ -1,3 +1,4 @@
+// intro-card
 .intro-card {
   background: #ffffff1a;
   backdrop-filter: blur(3px);
@@ -43,7 +44,7 @@
     }
   }
 }
-
+// section-title
 .section-title {
   position: relative;
   font-size: $font-base * 2;
@@ -69,6 +70,7 @@
     right: 36%;
   }
 }
+// featured-card
 .featured-card {
   max-width: 416px;
   .featured-card-img {
@@ -91,6 +93,96 @@
       background: #f1f1f1;
     }
     .featured-footer-date {
+      color: $primary-600;
+    }
+  }
+}
+// work-card
+.work-card {
+  width: 49%;
+  .work-card-img {
+    border-radius: 5px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  .work-card-title {
+    display: inline;
+    color: $primary-700;
+    font-size: $font-base * 1.75;
+    font-weight: 700;
+    line-height: 2.1;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  .work-card-text {
+    color: $primary-500;
+    margin-bottom: 24px;
+  }
+  .work-card-badge li {
+    background: $primary-200;
+    padding: 4px 12px;
+    border-radius: 16px;
+    color: $primary-700;
+    margin: 0 16px 80px 0;
+  }
+}
+// work-modal
+.modal-content {
+  border-radius: 16px;
+  .work-modal-header {
+    padding: 40px 56px 0px 56px;
+  }
+  .modal-close-btn {
+    text-align: right;
+    span {
+      &:hover {
+        font-weight: 800;
+        cursor: pointer;
+      }
+    }
+  }
+  .work-modal-title {
+    margin-top: 40px;
+    font-size: $font-base * 1.75;
+    font-weight: 700;
+    color: $primary-700;
+    line-height: 2.1;
+    margin-bottom: 8px;
+  }
+  .work-modal-subtitle {
+    color: $primary-500;
+    margin-bottom: 40px;
+  }
+  .work-modal-intro {
+    margin-bottom: 40px;
+    .modal-intro-text {
+      max-width: 532px;
+      color: $primary-800;
+    }
+    .modal-intro-info {
+      height: 56px;
+      border-left: $primary-400 solid 1px;
+      padding-left: 24px;
+      color: $primary-600;
+    }
+  }
+  .work-modal-content {
+    background: $primary-100;
+    border-radius: 0 0 16px 16px;
+    padding: 80px 178px 24px 178px;
+    img {
+      max-width: 720px;
+      border-radius: 20px;
+    }
+    .modal-content-title {
+      margin: 24px 0 16px 0;
+      color: $primary-800;
+      font-size: $font-base * 1.5;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+    .modal-content-text {
+      margin-bottom: 56px;
       color: $primary-600;
     }
   }
