@@ -98,6 +98,7 @@
   left: 0;
   right: 0;
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+  background-size: cover;
 }
 .footer-content {
   max-width: 1296px;
@@ -126,8 +127,10 @@
     margin-top: 80px;
     font-size: $font-base * 1.25;
     .bg-dark {
-      color: #fff;
       font-weight: 700;
+      p {
+        color: #fff;
+      }
       &:hover {
         background: $primary-700;
       }
@@ -141,7 +144,7 @@
     .footer-social-item {
       width: 306px;
       border-radius: 8px;
-      padding: 10px 0 10px 37px;
+      padding: 10px 0;
       margin-bottom: 24px;
       cursor: pointer;
       img {
@@ -149,6 +152,11 @@
         height: 40px;
         vertical-align: middle;
         margin-right: 8px;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+        padding-left: 37px;
       }
       p {
         align-self: center;

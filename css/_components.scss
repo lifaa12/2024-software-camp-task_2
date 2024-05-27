@@ -80,8 +80,11 @@
   .featured-card-title {
     font-size: $font-base * 1.25;
     font-weight: 700;
-    color: $primary-700;
     margin-bottom: 16px;
+    a {
+      text-decoration: none;
+      color: $primary-700;
+    }
   }
   .featured-card-footer {
     display: flex;
@@ -184,6 +187,172 @@
     .modal-content-text {
       margin-bottom: 56px;
       color: $primary-600;
+    }
+  }
+}
+//process-item
+.process-item {
+  max-width: 655px;
+  margin: 0 auto 64px auto;
+  padding: 37.5px 32px;
+  background: $primary-700;
+  border: 1px solid $primary-500;
+  position: relative;
+  .process-arrow {
+    color: $primary-600;
+    font-size: 28px;
+    position: absolute;
+    bottom: -44px;
+    left: 47%;
+  }
+  .process-item-num {
+    font-family: "Tourney";
+    font-size: $font-base * 4.5;
+    color: $primary-500;
+    margin-right: 32px;
+  }
+  .process-item-text {
+    h4 {
+      color: #fff;
+      font-weight: 700;
+      font-size: $font-base * 1.75;
+      line-height: 2.1;
+    }
+    p {
+      color: $primary-300;
+      font-size: $font-base * 1.25;
+      line-height: 1.8;
+    }
+  }
+}
+// price-list-item
+.price-list-item {
+  width: 32%;
+  padding: 32px;
+  box-shadow: 0px 4px 8px 0px #00000014;
+  background: $primary-100;
+  border-radius: 8px;
+  img {
+    width: 42px;
+    margin-right: 8px;
+  }
+  h4 {
+    font-size: $font-base * 1.75;
+    color: $primary-600;
+    font-weight: 600;
+    margin-right: 65px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 41px;
+      height: 1px;
+      background: $primary-400;
+      right: -50px;
+      top: 46%;
+    }
+  }
+  p {
+    font-size: $font-base * 2;
+    color: $primary-800;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  span {
+    color: $primary-600;
+    padding-top: 20px;
+  }
+}
+// qa-item
+.qa-item {
+  padding: 24px 0 12px 24px;
+  width: 48%;
+  border: 1px solid $primary-300;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  h4 {
+    font-weight: 700;
+    color: $primary-700;
+    line-height: 1.8;
+    font-size: $font-base * 1.5;
+    margin-bottom: 16px;
+  }
+  p {
+    font-size: $font-base * 1.25;
+    color: $primary-600;
+  }
+}
+// blog-card
+.blog-card {
+  margin-bottom: 64px;
+  img {
+    width: 306px;
+    height: 220px;
+    border-radius: 8px;
+    margin-right: 16px;
+    object-fit: cover;
+  }
+  .blog-info {
+    margin-bottom: 16px;
+    .blog-date {
+      color: $primary-600;
+      margin-right: 16px;
+    }
+    .blog-badge {
+      background: $primary-200;
+      color: $primary-700;
+      padding: 4px 12px;
+      border-radius: 16px;
+    }
+  }
+  .blog-title {
+    font-size: $font-base * 1.5;
+    color: $primary-700;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .blog-text {
+    margin-top: 16px;
+    color: $primary-700;
+  }
+}
+// blog-article
+.blog-article-main {
+  padding-right: 133px;
+  .article-info {
+    color: $primary-500;
+    margin-bottom: 40px;
+  }
+  .article-title {
+    font-size: $font-base * 2;
+    color: $primary-700;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .article-subtitle {
+    font-size: $font-base * 1.5;
+    color: $primary-700;
+    margin-bottom: 64px;
+  }
+  .article-body {
+    h4 {
+      font-size: $font-base * 1.5;
+      font-weight: 700;
+      color: $primary-700;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: $font-base * 1.25;
+      line-height: 1.8;
+      color: $primary-700;
+      margin-bottom: 40px;
+    }
+  }
+  .article-footer {
+    p {
+      font-size: $font-base;
+      color: $primary-700;
+      margin-bottom: 80px;
     }
   }
 }
