@@ -1,7 +1,32 @@
 // index
 .index-header {
+  @include mobile {
+    display: block;
+  }
   .index-header-content {
     padding: 248px 0;
+    @media (max-width: 1740px) {
+      padding: 220px 0 170px 0;
+    }
+    @media (max-width: 1430px) {
+      padding: 150px 0 100px 0;
+    }
+    @media (max-width: 1330px) {
+      padding: 80px 0;
+    }
+    @media (max-width: 1250px) {
+      padding: 50px 0;
+    }
+    @media (max-width: 1090px) {
+      padding: 30px 0;
+    }
+    @include pad {
+      padding: 0;
+    }
+    @include mobile {
+      margin-top: 76%;
+      text-align: center;
+    }
     .index-header-title {
       font-size: $font-base * 2.5;
       color: $primary-700;
@@ -12,36 +37,48 @@
       font-size: $font-base * 1.25;
       margin-bottom: 16px;
       color: $primary-600;
-      position: relative;
-      &::before {
-        content: "";
-        width: 148px;
-        height: 10px;
-        top: 20px;
-        left: 140px;
-        z-index: -1;
-        position: absolute;
-        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+      span {
+        position: relative;
       }
-      &::after {
-        content: "";
-        width: 119px;
-        height: 10px;
-        top: 20px;
-        left: 300px;
-        z-index: -1;
-        position: absolute;
-        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
-        background-size: contain;
+      .header-text-ui {
+        &::before {
+          content: "";
+          width: 148px;
+          height: 10px;
+          top: 15px;
+          left: -5px;
+          z-index: -1;
+          position: absolute;
+          background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+        }
+      }
+      .header-text-frontend {
+        &::before {
+          content: "";
+          width: 110px;
+          height: 10px;
+          top: 15px;
+          left: -5px;
+          z-index: -1;
+          position: absolute;
+          background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+          background-size: contain;
+        }
       }
     }
-    span {
+    .index-header-ability {
       color: $primary-400;
       margin-bottom: 60px;
     }
   }
   .header-content-icon {
     margin-top: 60px;
+    @include pad {
+      margin-top: 30px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
     a {
       margin-right: 16px;
       text-decoration: none;
@@ -58,12 +95,50 @@
     position: absolute;
     max-width: 1154px;
     right: 0;
+    @media (max-width: 1740px) {
+      max-width: 1000px;
+    }
+    @media (max-width: 1430px) {
+      max-width: 900px;
+    }
+    @media (max-width: 1330px) {
+      max-width: 800px;
+    }
+    @media (max-width: 1250px) {
+      max-width: 650px;
+    }
+    @media (max-width: 1090px) {
+      max-width: 550px;
+    }
+    @include pad {
+      max-width: 400px;
+      right: 20px;
+    }
+    @media (max-width: 875px) {
+      max-width: 330px;
+    }
+    @include mobile {
+      content: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-sm.png?raw=true");
+      top: 57px;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+    }
   }
 }
 .work-intro {
   padding-top: 120px;
+  @include pad {
+    padding-top: 30px;
+  }
   .work-intro-content {
     height: 800px;
+    @media (max-width: 1250px) {
+      height: 600px;
+    }
+    @include mobile {
+      height: 660px;
+    }
     .homepage-work-bg-1 {
       @include full-bg-img(
         "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1-bg.png?raw=true",
@@ -76,6 +151,9 @@
         height: 800px;
         background: gray;
         opacity: 20%;
+        @include mobile {
+          height: 400px;
+        }
       }
     }
     .homepage-work-bg-2 {
@@ -90,6 +168,12 @@
         height: 800px;
         background: #000;
         opacity: 30%;
+        @include pad {
+          width: 60%;
+        }
+        @include mobile {
+          display: none;
+        }
       }
     }
     .homepage-work-bg-3 {
@@ -104,94 +188,172 @@
         height: 800px;
         background: #000;
         opacity: 50%;
+        @include mobile {
+          height: 400px;
+        }
       }
     }
     .intro {
+      @include mobile {
+        flex-direction: column;
+      }
       .homepage-work-1 {
-        max-width: 714px;
-        height: 800px;
+        max-width: 55%;
         margin-right: 55px;
+        @media (max-width: 1250px) {
+          max-height: 600px;
+        }
+        @include mobile {
+          align-self: center;
+          height: 400px;
+          margin: 0;
+        }
+        @media (max-width: 580px) {
+          max-width: 295px;
+          max-height: 297px;
+          margin-top: 103px;
+        }
       }
       .homepage-work3-sm {
-        max-width: 710px;
+        max-width: 55%;
         height: 512px;
         margin: 176px 50px 0 0;
+        @media (max-width: 1250px) {
+          max-height: 400px;
+        }
+        @include mobile {
+          align-self: center;
+          height: 210px;
+          margin: 90px 0;
+        }
       }
     }
   }
 }
-.service-bg {
-  @include full-bg-img(
-    "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true",
-    880px
-  );
-}
-.service-title {
-  padding-top: 80px;
-  &::before {
-    top: 77%;
+.service {
+  @include mobile {
+    background: $primary-100;
+    padding-bottom: 80px;
   }
-  &::after {
-    top: 77%;
-  }
-}
-.service-content {
-  margin-bottom: 80px;
-  li {
-    width: 304px;
-    height: 304px;
-    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 24px;
+  .service-bg {
+    @include full-bg-img(
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true",
+      880px
+    );
+    @include mobile {
+      background-image: none;
     }
-    p {
+  }
+  .service-title {
+    padding-top: 80px;
+    &::before {
+      top: 77%;
+    }
+    &::after {
+      top: 77%;
+    }
+  }
+  .service-content {
+    margin-bottom: 80px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+    li {
+      width: 24%;
+      height: 304px;
+      background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include mobile {
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto 24px auto;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-size: $font-base * 1.75;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+  .service-contact {
+    .service-contact-text {
       font-size: $font-base * 1.75;
-      font-weight: 700;
+      color: $primary-700;
+      font-weight: 600;
+      line-height: 2.1;
+      margin-bottom: 40px;
+    }
+    .service-contact-link {
+      display: block;
+      width: 276px;
+      height: 62px;
+      background: #000;
+      border-radius: 5px;
       color: #fff;
+      padding: 16px 32px;
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 1.8;
+      span {
+        margin-left: 12px;
+      }
+      &:hover {
+        background: #cac6c6;
+        color: #000;
+      }
+    }
+    margin-bottom: 126px;
+    @include pad {
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      margin-bottom: 0;
     }
   }
-}
-.service-contact {
-  .service-contact-text {
-    font-size: $font-base * 1.75;
-    color: $primary-700;
-    font-weight: 600;
-    line-height: 2.1;
-    margin-bottom: 40px;
-  }
-  .service-contact-link {
-    display: block;
-    width: 276px;
-    height: 62px;
-    background: #000;
-    border-radius: 5px;
-    color: #fff;
-    padding: 16px 32px;
-    text-decoration: none;
-    font-weight: 600;
-    line-height: 1.8;
-    span {
-      margin-left: 12px;
-    }
-    &:hover {
-      background: #cac6c6;
-      color: #000;
-    }
-  }
-  margin-bottom: 126px;
 }
 .featured {
   padding: 120px 0;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
   .swiper {
     max-width: 1296px;
     height: 430px;
+    @include mobile {
+      margin: 0;
+      overflow: visible;
+      height: auto;
+    }
+  }
+  .swiper-wrapper {
+    @include mobile {
+      display: block;
+    }
+  }
+  .featured-mobile-btn {
+    margin: 0 auto;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: $font-base * 1.25;
+    &:hover {
+      color: #000;
+      background: $primary-400;
+    }
   }
 }
 :root {
@@ -201,10 +363,16 @@
 // work
 .work-header-bg {
   @include full-bg-color(#fafafa, 473px);
+  @include mobile {
+    height: 630px;
+  }
 }
 .work-header-title {
   padding-top: 139px;
   margin-bottom: 83px;
+  @include mobile {
+    margin-bottom: 40px;
+  }
   .work-header-text {
     display: inline;
     font-size: $font-base * 1.5;
@@ -220,6 +388,10 @@
       height: 60px;
       top: -60px;
       left: -70px;
+      @include mobile {
+        top: -80px;
+        left: 140px;
+      }
     }
     &::after {
       content: "";
@@ -230,12 +402,45 @@
       bottom: -50px;
       right: -50;
       z-index: 99;
+      @include mobile {
+        display: none;
+      }
+    }
+    .work-header-highlight1 {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+        bottom: 0;
+        left: -10px;
+        width: 148px;
+        height: 10px;
+        z-index: -1;
+      }
+    }
+    .work-header-highlight2 {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+        bottom: 0;
+        left: -10px;
+        width: 148px;
+        height: 10px;
+        z-index: -1;
+      }
     }
   }
 }
 .work-header-exp {
   max-width: 636px;
   margin: 0 auto 80px auto;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
   .header-exp-item {
     width: 46%;
     .exp-item-title {
@@ -259,6 +464,9 @@
 }
 .work-show {
   padding-top: 120px;
+  @include mobile {
+    padding-top: 80px;
+  }
 }
 .work-pagination {
   width: 152px;
@@ -283,16 +491,23 @@
     }
   }
 }
+
 // service
 .service-item {
   padding: 40px 0;
 }
 .service-process {
+  @include mobile {
+    padding: 0 10px;
+  }
   .service-process-bg {
-    @include full-bg-img(
+    @include full-bg-img-service(
       "https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/process-bg.png?raw=true",
       2116px
     );
+    @media (max-width: 400px) {
+      height: 2420px;
+    }
   }
   .service-process-title {
     color: #fff;
@@ -307,6 +522,11 @@
 }
 .price {
   padding: 120px 0;
+  .price-list {
+    @include mobile {
+      flex-direction: column;
+    }
+  }
 }
 .case {
   padding-bottom: 40px;
@@ -321,6 +541,12 @@
   }
   .case-bg {
     @include full-bg-color($primary-100, 1571px);
+    @media (max-width: 1220px) {
+      height: 1360px;
+    }
+    @include pad {
+      background: none;
+    }
   }
   .work-card-img,
   .work-card-title {
@@ -329,43 +555,86 @@
 }
 .qa {
   padding: 120px 0;
+  @media (max-width: 1090px) {
+    padding: 20px 0;
+  }
   .qa-list {
     max-width: 1076px;
     margin: 0 auto;
   }
 }
+
 // blog
 .blog {
-  padding-bottom: 120px;
+  padding: 120px 0;
+  @include mobile {
+    padding: 40px 0;
+  }
   .blog-title {
     margin-bottom: 24px;
   }
   .blog-subtitle {
     color: $primary-500;
     margin-bottom: 80px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+  .blog-content {
+    @include mobile {
+      flex-direction: column;
+      flex-direction: column-reverse;
+    }
   }
   .blog-main,
   .blog-article-main {
     width: 76%;
+    @include mobile {
+      width: 90%;
+      margin: 40px auto 0 auto;
+    }
   }
   .blog-filter,
   .article-filter {
     width: 23%;
     background: $primary-100;
     padding: 80px 0 0 80px;
-    li {
-      margin-bottom: 32px;
+    @include pad {
+      padding-left: 50px;
     }
-    a {
-      text-decoration: none;
-      font-size: $font-base * 1.25;
-      line-height: 1.8;
-      color: $primary-600;
-      padding: 4px;
+    @include mobile {
+      width: 100%;
+      padding: 0;
     }
-    .filter-active {
-      border-bottom: 2px solid;
-      color: $primary-800;
+    .filter {
+      @include mobile {
+        display: flex;
+        overflow-x: auto;
+      }
+      li {
+        margin-bottom: 32px;
+        @include mobile {
+          width: 31%;
+          flex-shrink: 0;
+          margin: 0;
+          padding: 23px 10px;
+        }
+      }
+      a {
+        text-decoration: none;
+        font-size: $font-base * 1.25;
+        line-height: 1.8;
+        color: $primary-600;
+        padding: 4px;
+        @include mobile {
+          font-size: $font-base;
+          padding: 0;
+        }
+      }
+      .filter-active {
+        border-bottom: 2px solid;
+        color: $primary-800;
+      }
     }
   }
   .blog-filter a {
@@ -375,27 +644,61 @@
     }
   }
 }
-
 .blog-article {
   margin-top: 120px;
+  @include mobile {
+    margin: 0;
+    padding: 0;
+  }
 }
 .more-article {
   border-top: 1px solid $primary-400;
-  padding: 80px 0 120px 0;
+  @include mobile {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
   .more-article-title {
     font-size: $font-base * 1.75;
     font-weight: 700;
     color: $primary-700;
     margin-bottom: 40px;
+    @include mobile {
+      text-align: center;
+    }
   }
-  .featured-card {
-    margin-right: 24px;
+  .more-article-content {
+    @include mobile {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    .featured-card {
+      margin-right: 24px;
+      @include mobile {
+        margin: 0 auto;
+      }
+      .featured-card-title {
+        @include mobile {
+          margin: 20px 0 40px 0;
+        }
+      }
+    }
   }
 }
+
+// contact
 .contact {
   padding: 80px 0;
+  @include mobile {
+    padding: 80px 15px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   .contact-form {
     width: 40%;
+    @include mobile {
+      width: 80%;
+    }
     label {
       font-size: $font-base * 1.25;
     }
@@ -406,7 +709,7 @@
       margin: 10px 0;
       padding: 10px;
       border-radius: 20px;
-      border: 2px solid #000;
+      border: 1px solid #000;
       resize: none;
     }
     .contact-form-text {
@@ -428,6 +731,10 @@
   }
   .contact-info {
     width: 45%;
+    @include mobile {
+      width: 80%;
+      text-align: center;
+    }
     .contact-info-title {
       font-size: $font-base * 3;
       font-weight: 700;
@@ -441,6 +748,12 @@
     }
     .contact-comm {
       font-size: $font-base * 1.8;
+      @include pad {
+        font-size: $font-base * 1.5;
+      }
+      @include mobile {
+        font-size: $font-base * 1.25;
+      }
       li {
         margin-bottom: 20px;
       }
@@ -448,6 +761,10 @@
         font-size: $font-base * 1.8;
         margin-right: 30px;
         width: 20px;
+        @include mobile {
+          font-size: $font-base * 1.25;
+          margin: 0;
+        }
       }
       a {
         text-decoration: none;

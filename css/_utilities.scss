@@ -25,6 +25,20 @@
 .bg-white {
   background: #fff;
 }
-.pt-120 {
-  padding-top: 120px;
+.mobile-br {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+.mobile-none {
+  @include mobile {
+    display: none;
+  }
+}
+.pad-none {
+  display: none;
+  @include mobile {
+    display: block;
+  }
 }

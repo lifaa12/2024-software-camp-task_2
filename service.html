@@ -14,48 +14,63 @@
       <h1 class="navbar-logo d-flex justify-content-c">
         <a href="./index.html">Noel個人官網</a>
       </h1>
-      <ul class="nav d-flex justify-content-sb">
-        <li class="nav-item">
-          <a href="./index.html">首頁</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+      <ul class="nav d-flex justify-content-sb animate__animated">
+        <li class="nav-item mobile-mt">
+          <a href="./index.html">首頁
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./work.html">作品集</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./work.html">作品集
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item nav-active">
-          <a href="./service.html">服務項目</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./service.html">服務項目
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./blog.html">部落格</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./blog.html">部落格
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./contact.html">聯絡我</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./contact.html">聯絡我
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
       </ul>
       <div class="nav-end"></div>
+      <div class="menu-button menu-hide">
+        <a href="#">
+          <span class="material-symbols-outlined menu-open">
+            menu
+          </span>
+          <span class="material-symbols-outlined menu-close">
+            close
+          </span>
+        </a>
+      </div>
     </nav>
     <div class="service service-item">
       <h3 class="service-title section-title text-center">服務項目</h3>
-      <ul class="service-content d-flex justify-content-sb">
+      <ul class="service-content d-flex justify-content-sb flex-w">
         <li>
           <img
             src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/service-item-visual.svg"
@@ -163,24 +178,24 @@
             src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/price-item-visual.svg"
             alt="price-item-visual">
           <h4>平面設計</h4>
-          <p>6,000</p>
-          <span>起</span>
+          <p>6,000<span class="mobile-none">起</span></p>
+          <span class="pad-none">起</span>
         </li>
         <li class="price-list-item d-flex align-items-c">
           <img
             src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/price-item-ui.svg"
             alt="price-item-ui">
           <h4>UI設計</h4>
-          <p>15,000</p>
-          <span>起</span>
+          <p>15,000<span class="mobile-none">起</span></p>
+          <span class="pad-none">起</span>
         </li>
         <li class="price-list-item d-flex align-items-c">
           <img
             src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/price-item-front-end.svg"
             alt="price-item-front-end">
           <h4>前端開發</h4>
-          <p>22,000</p>
-          <span>起</span>
+          <p>22,000<span class="mobile-none">起</span></p>
+          <span class="pad-none">起</span>
         </li>
       </ul>
     </div>
@@ -285,7 +300,6 @@
                 alt="instagram">
               <p>hexschool_demo</p>
             </a>
-
           </li>
           <li class="footer-social-item bg-white">
             <a href="https://www.facebook.com/?locale=zh_TW" class="d-flex">
@@ -298,13 +312,13 @@
         </ul>
       </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"></script>
     <script src="./js/plugin.js"></script>
-    <script src="./js/all.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

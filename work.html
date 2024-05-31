@@ -14,51 +14,66 @@
       <h1 class="navbar-logo d-flex justify-content-c">
         <a href="./index.html">Noel個人官網</a>
       </h1>
-      <ul class="nav d-flex justify-content-sb">
-        <li class="nav-item">
-          <a href="./index.html">首頁</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+      <ul class="nav d-flex justify-content-sb animate__animated">
+        <li class="nav-item mobile-mt">
+          <a href="./index.html">首頁
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item nav-active">
-          <a href="./work.html">作品集</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./work.html">作品集
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./service.html">服務項目</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./service.html">服務項目
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./blog.html">部落格</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./blog.html">部落格
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
         <li class="nav-item">
-          <a href="./contact.html">聯絡我</a>
-          <span class="corner corner-tl"></span>
-          <span class="corner corner-tr"></span>
-          <span class="corner corner-bl"></span>
-          <span class="corner corner-br"></span>
+          <a href="./contact.html">聯絡我
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+          </a>
         </li>
       </ul>
       <div class="nav-end"></div>
+      <div class="menu-button menu-hide">
+        <a href="#">
+          <span class="material-symbols-outlined menu-open">
+            menu
+          </span>
+          <span class="material-symbols-outlined menu-close">
+            close
+          </span>
+        </a>
+      </div>
     </nav>
     <header class="work-header">
       <div class="work-header-bg"></div>
       <div class="work-header-title text-center">
-        <p class="work-header-text">讓使用者在觀賞與使用的旅程中，<span
-            class="work-header-highlight1">發現設計的價值</span><br>而我在設計與開發的過程中，<span
-            class="work-header-highlight2">看見自己的價值</span></p>
+        <p class="work-header-text">讓使用者在觀賞與使用的旅程中，<br class="mobile-br">發現<span
+            class="work-header-highlight1">設計的價值</span><br>而我在設計與開發的過程中，<br class="mobile-br">看見<span
+            class="work-header-highlight2">自己的價值</span></p>
       </div>
       <div class="work-header-exp d-flex justify-content-sb">
         <div class="header-exp-item text-center">
@@ -99,8 +114,8 @@
                 <p class="modal-intro-text">STAR TRAVEL 為 KK
                   公司宇宙旅行的購票網站。<br>主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。</p>
                 <ul class="modal-intro-info">
-                  <li>設計原則：宇宙旅行、深色背景、強烈視覺效果</li>
-                  <li>開發方式：Bootstrap、Javascript、RWD</li>
+                  <li>設計原則<span class="mobile-none">：</span><br class="mobile-br">宇宙旅行、深色背景、強烈視覺效果</li>
+                  <li>開發方式<span class="mobile-none">：</span><br class="mobile-br">Bootstrap、Javascript、RWD</li>
                 </ul>
               </div>
             </div>
@@ -122,8 +137,8 @@
       <li class="work-card">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true"
-          alt="work-img" class="work-card-img">
-        <h4 class="work-card-title">理財App</h4>
+          alt="work-img" class="work-card-img" data-bs-toggle="modal" data-bs-target="#workModal-1">
+        <h4 class="work-card-title" data-bs-toggle="modal" data-bs-target="#workModal-1">理財App</h4>
         <p class="work-card-text">連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
         <ul class="work-card-badge d-flex">
           <li>APP設計</li>
@@ -134,8 +149,8 @@
       <li class="work-card">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true"
-          alt="work-img" class="work-card-img">
-        <h4 class="work-card-title">醫美診所官網</h4>
+          alt="work-img" class="work-card-img" data-bs-toggle="modal" data-bs-target="#workModal-1">
+        <h4 class="work-card-title" data-bs-toggle="modal" data-bs-target="#workModal-1">醫美診所官網</h4>
         <p class="work-card-text">永保青春的秘密，從粹究開始</p>
         <ul class="work-card-badge d-flex">
           <li>網頁設計</li>
@@ -146,8 +161,8 @@
       <li class="work-card">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
-          alt="work-img" class="work-card-img">
-        <h4 class="work-card-title">美美美早餐店 POS 機 UI Design </h4>
+          alt="work-img" class="work-card-img" data-bs-toggle="modal" data-bs-target="#workModal-1">
+        <h4 class="work-card-title" data-bs-toggle="modal" data-bs-target="#workModal-1">美美美早餐店 POS 機 UI Design </h4>
         <p class="work-card-text">訂單送單一目瞭然，自動報表分析好輕鬆</p>
         <ul class="work-card-badge d-flex">
           <li>UI 設計</li>
@@ -158,8 +173,8 @@
       <li class="work-card">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
-          alt="work-img" class="work-card-img">
-        <h4 class="work-card-title">電影院訂票系統</h4>
+          alt="work-img" class="work-card-img" data-bs-toggle="modal" data-bs-target="#workModal-1">
+        <h4 class="work-card-title" data-bs-toggle="modal" data-bs-target="#workModal-1">電影院訂票系統</h4>
         <p class="work-card-text">三步驟完成訂票，電腦手機都支援</p>
         <ul class="work-card-badge d-flex">
           <li>前端開發</li>
@@ -170,8 +185,8 @@
       <li class="work-card">
         <img
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
-          alt="work-img" class="work-card-img">
-        <h4 class="work-card-title">巧克巧克形象官網設計</h4>
+          alt="work-img" class="work-card-img" data-bs-toggle="modal" data-bs-target="#workModal-1">
+        <h4 class="work-card-title" data-bs-toggle="modal" data-bs-target="#workModal-1">巧克巧克形象官網設計</h4>
         <p class="work-card-text">三步驟完成訂票，電腦手機都支援</p>
         <ul class="work-card-badge d-flex">
           <li>UI設計</li>
@@ -211,7 +226,6 @@
                 alt="instagram">
               <p>hexschool_demo</p>
             </a>
-
           </li>
           <li class="footer-social-item bg-white">
             <a href="https://www.facebook.com/?locale=zh_TW" class="d-flex">
@@ -230,7 +244,8 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
   <script src="./js/plugin.js"></script>
-  <script src="./js/all.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

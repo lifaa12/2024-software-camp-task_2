@@ -7,4 +7,10 @@ body {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
   padding-top: 96px;
+  @media (max-width: 1330px) {
+    padding: 96px 50px 0 50px;
+  }
+  @include mobile {
+    padding: 0;
+  }
 }

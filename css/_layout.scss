@@ -11,50 +11,126 @@
   top: 0;
   left: 0;
   right: 0;
+  @include mobile {
+    position: relative;
+    padding: 8px 0;
+  }
   .navbar-logo {
     width: 30%;
+    @include mobile {
+      width: 20%;
+    }
     a {
       @include h1-img;
     }
   }
+  .menu-button {
+    margin-right: 20px;
+    display: none;
+    @include mobile {
+      display: block;
+    }
+    span {
+      color: #000;
+      font-size: 30px;
+      margin-top: 3px;
+    }
+  }
+  .menu-hide .menu-close {
+    display: none;
+  }
+  .menu-show .menu-open {
+    display: none;
+  }
   .nav {
     width: 37%;
+    animation-duration: 0.5s;
+    animation-play-state: paused;
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      text-align: center;
+      max-height: 0;
+      overflow: hidden;
+      width: 100%;
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 57px;
+      background: #fff;
+      animation-play-state: running;
+    }
     .nav-active {
       font-weight: 600;
+      @include mobile {
+        font-weight: 700;
+      }
       .corner-tl {
         top: 0;
         left: 0;
         border-top: 1px solid #919191;
         border-left: 1px solid #919191;
+        @include mobile {
+          top: -4px;
+        }
       }
       .corner-tr {
         top: 0;
         right: 0;
         border-top: 1px solid #919191;
         border-right: 1px solid #919191;
+        @include mobile {
+          top: -4px;
+        }
       }
       .corner-bl {
         bottom: 0;
         left: 0;
         border-bottom: 1px solid #919191;
         border-left: 1px solid #919191;
+        @include mobile {
+          bottom: -4px;
+        }
       }
       .corner-br {
         bottom: 0;
         right: 0;
         border-bottom: 1px solid #919191;
         border-right: 1px solid #919191;
+        @include mobile {
+          bottom: -4px;
+        }
+      }
+    }
+    .mobile-mt {
+      @include mobile {
+        margin-top: 16px;
+      }
+    }
+    .mobile-mb {
+      @include mobile {
+        margin-bottom: 16px;
       }
     }
     .nav-item {
       align-self: center;
-      position: relative;
       cursor: pointer;
+      @include mobile {
+        padding: 4px 8px;
+        margin-bottom: 24px;
+      }
       a {
         text-decoration: none;
         color: #000;
         display: block;
         padding: 4px 8px;
+        position: relative;
+        @include mobile {
+          font-size: $font-base * 1.25;
+          display: inline;
+        }
       }
       .corner {
         position: absolute;
@@ -67,31 +143,49 @@
           left: 0;
           border-top: 1px solid #919191;
           border-left: 1px solid #919191;
+          @include mobile {
+            top: -4px;
+          }
         }
         .corner-tr {
           top: 0;
           right: 0;
           border-top: 1px solid #919191;
           border-right: 1px solid #919191;
+          @include mobile {
+            top: -4px;
+          }
         }
         .corner-bl {
           bottom: 0;
           left: 0;
           border-bottom: 1px solid #919191;
           border-left: 1px solid #919191;
+          @include mobile {
+            bottom: -4px;
+          }
         }
         .corner-br {
           bottom: 0;
           right: 0;
           border-bottom: 1px solid #919191;
           border-right: 1px solid #919191;
+          @include mobile {
+            bottom: -4px;
+          }
         }
       }
     }
   }
   .nav-end {
     width: 30%;
+    @include pad {
+      width: 20%;
+    }
   }
+}
+.navbar-drop .nav {
+  max-height: 400px;
 }
 .footer {
   position: absolute;
@@ -99,12 +193,26 @@
   right: 0;
   background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
   background-size: cover;
+  @include mobile {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true);
+  }
 }
 .footer-content {
   max-width: 1296px;
   margin: 0 auto;
+  @media (max-width: 1330px) {
+    margin-left: 20px;
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
   .footer-text {
     padding: 119px 0;
+    @include mobile {
+      padding: 40px 0;
+      text-align: center;
+    }
     p {
       font-size: $font-base * 1.25;
       color: $primary-700;
@@ -126,6 +234,12 @@
   .footer-social {
     margin-top: 80px;
     font-size: $font-base * 1.25;
+    @media (max-width: 1330px) {
+      margin-right: 20px;
+    }
+    @include mobile {
+      margin: 0;
+    }
     .bg-dark {
       font-weight: 700;
       p {
