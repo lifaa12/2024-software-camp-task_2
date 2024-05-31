@@ -109,6 +109,9 @@
     &:hover {
       background: #fff;
       color: #000;
+      @include mobile {
+        background: $primary-400;
+      }
     }
   }
 }

@@ -709,6 +709,11 @@ img {
   background: #fff;
   color: #000;
 }
+@media (max-width: 767px) {
+  .intro-card .intro-card-link:hover {
+    background: #c1c1c1;
+  }
+}
 
 @media (max-width: 767px) {
   .intro-card-mobile {
@@ -2268,23 +2273,34 @@ body {
   }
 }
 @media (max-width: 767px) {
-  .featured .swiper-wrapper {
+  .featured .swiper .swiper-wrapper {
     display: block;
   }
 }
-.featured .featured-mobile-btn {
-  margin: 0 auto;
-  text-decoration: none;
-  background: #000;
-  color: #fff;
-  padding: 16px 32px;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 20px;
+@media (max-width: 767px) {
+  .featured .swiper .swiper-pagination {
+    display: none;
+  }
 }
-.featured .featured-mobile-btn:hover {
-  color: #000;
-  background: #c1c1c1;
+.featured .featured-mobile-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  .featured .featured-mobile-btn {
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .featured .featured-mobile-btn:hover {
+    color: #000;
+    background: #c1c1c1;
+  }
 }
 
 :root {

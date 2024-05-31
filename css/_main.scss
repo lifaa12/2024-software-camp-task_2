@@ -335,24 +335,34 @@
       overflow: visible;
       height: auto;
     }
-  }
-  .swiper-wrapper {
-    @include mobile {
-      display: block;
+    .swiper-wrapper {
+      @include mobile {
+        display: block;
+      }
+    }
+    .swiper-pagination {
+      @include mobile {
+        display: none;
+      }
     }
   }
+
   .featured-mobile-btn {
-    margin: 0 auto;
-    text-decoration: none;
-    background: #000;
-    color: #fff;
-    padding: 16px 32px;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: $font-base * 1.25;
-    &:hover {
-      color: #000;
-      background: $primary-400;
+    display: none;
+    @include mobile {
+      display: block;
+      margin: 0 auto;
+      text-decoration: none;
+      background: #000;
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: $font-base * 1.25;
+      &:hover {
+        color: #000;
+        background: $primary-400;
+      }
     }
   }
 }
