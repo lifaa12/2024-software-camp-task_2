@@ -47,7 +47,7 @@ const blogData=[
 let showData=[];
 const filter=document.querySelector(".filter");
 const blog=document.querySelector(".blog-main");
-const filterList=document.querySelectorAll(".filter a");
+const filterList=document.querySelectorAll(".filter a")
 
 const renderData=(data)=>{
   let str="";
