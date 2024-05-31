@@ -256,7 +256,7 @@
       }
     }
     .footer-social-item {
-      width: 306px;
+      max-width: 306px;
       border-radius: 8px;
       padding: 10px 0;
       margin-bottom: 24px;
@@ -270,7 +270,7 @@
       a {
         text-decoration: none;
         color: #000;
-        padding-left: 37px;
+        padding: 0 15px;
       }
       p {
         align-self: center;
